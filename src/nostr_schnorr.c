@@ -75,7 +75,7 @@ static const struct luaL_Reg module_funcs[] = {
 };
 
 /* Module entry point */
-int luaopen_nostr_verify(lua_State *L) {
+int luaopen_nostr_schnorr(lua_State *L) {
     ensure_context();
     luaL_newlib(L, module_funcs);
     return 1;
