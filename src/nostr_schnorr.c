@@ -1,6 +1,6 @@
-// secp256k1_verify.c
+// nostr_schnorr.c
 // Fast Nostr Schnorr signature verifier for Lua/LuaJIT
-// Build: gcc -O3 -fPIC -shared -o secp256k1_verify.so secp256k1_verify.c -lsecp256k1
+// Build: gcc -O3 -fPIC -shared -o nostr_schnorr.so nostr_schnorr.c -lsecp256k1
 
 #include <lua.h>
 #include <lauxlib.h>
@@ -75,7 +75,7 @@ static const struct luaL_Reg module_funcs[] = {
 };
 
 /* Module entry point */
-int luaopen_secp256k1_verify(lua_State *L) {
+int luaopen_nostr_verify(lua_State *L) {
     ensure_context();
     luaL_newlib(L, module_funcs);
     return 1;
